@@ -1,0 +1,87 @@
+**8 Hosting Sphinx documentation on Github**
+============================================
+
+Hosting Sphinx documentation on GitHub involves a series of steps, from setting up your Sphinx documentation project to pushing it to a GitHub repository. Below is a step-by-step guide on how to host Sphinx documentation on GitHub
+
+**8.1 Install Sphinx**:
+-----------------------
+
+If you haven't already, you need to install Sphinx. You can use pip, the Python package manager, to install Sphinx:
+
+.. code-block :: bash
+
+    pip install sphinx
+
+**8.2 Create Your Sphinx Documentation**:
+-------------------------------------------
+
+Create your Sphinx documentation using the sphinx-quickstart command. This command will guide you through setting up your documentation project and generating the initial files and configuration.
+
+.. code-block:: bash
+
+    sphinx-quickstart
+
+Follow the prompts to configure your documentation project. You can specify the output directory, source directory, and various options. For hosting on GitHub, you typically use the default values or configure as needed.
+
+**8.3 Write Your Documentation**:
+----------------------------------
+
+Populate the source directory (usually named source) with your documentation content. Write your documentation using reStructuredText (reST) or Markdown, which Sphinx can convert into HTML.
+
+**8.4 Build Your Documentation**:
+-----------------------------------
+
+To generate HTML output from your reST or Markdown files, run the following command inside your project's root directory:
+
+.. code-block:: bash
+
+    make html
+
+This will create HTML files in the _build directory.
+
+**8.5 Initialize a Git Repository**:
+--------------------------------------
+
+If you haven't already, initialize a Git repository in your project's root directory:
+
+.. code-block:: bash
+
+    git init
+
+**8.6 Create a GitHub Repository**:
+---------------------------------------
+
+Go to GitHub and create a new repository. You can do this by clicking the "+" sign in the top right corner of the GitHub interface and selecting "New Repository." Follow the instructions to create a repository with a name of your choice.
+
+**8.7 Add a Remote to Your Git Repository**:
+----------------------------------------------
+
+In your local Git repository, add a remote that points to your GitHub repository. Replace <username> and <repository> with your GitHub username and repository name:
+
+.. code-block:: bash
+
+    git remote add origin https://github.com/<username>/<repository>.git
+
+**8.8 Commit and Push Your Documentation**:
+----------------------------------------------
+
+Commit your documentation files and push them to your GitHub repository:
+
+.. code-block:: bash
+
+    git add .
+    git commit -m "first commit"
+    git push -u origin main
+
+**8.9 Configure GitHub Pages**:
+----------------------------------
+
+To make your documentation accessible as a website, create one more file docs and the move the html file from build folder to docs folder  the go to your GitHub Pages in your repository settings. Go to the "Settings" tab of your GitHub repository, scroll down to the "GitHub Pages" section, and select the "main branch" as the source branch for your GitHub Pages site
+
+
+**8.10 Access Your Sphinx Documentation**:
+-------------------------------------------
+
+Your Sphinx documentation is now hosted on GitHub Pages. You can access it using the URL provided in the GitHub Pages settings, typically in the format: https://<username>.github.io/<repository>/.
+
+Your Sphinx documentation is now hosted on GitHub and accessible to others.
